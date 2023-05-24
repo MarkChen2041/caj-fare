@@ -20,7 +20,7 @@ public class HostnameApi {
 	@GetMapping(value = "/api/hostname", produces = "application/json")
 	public ResponseEntity<GenericResponseDTO> getFare()
 			throws JsonMappingException, JsonProcessingException {
-		log.info("GET /api/hostname modified");
+		log.info("GET /api/hostname modified2");
 		return new ResponseEntity<>(GenericResponseDTO.builder().data(Optional.ofNullable(System.getenv("HOSTNAME")))
 				.code(String.valueOf(HttpStatus.OK.value())).message(HttpStatus.OK.name()).version("v5").build(), HttpStatus.OK);
 	}
